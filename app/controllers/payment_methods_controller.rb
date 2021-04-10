@@ -1,4 +1,4 @@
-class PaymentMethodController < ApplicationController
+class PaymentMethodsController < ApplicationController
   def new
     @payment_method = PaymentMethod.new
   end
