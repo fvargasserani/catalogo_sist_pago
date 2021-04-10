@@ -1,24 +1,57 @@
-# README
+# 2da PARTE
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+rails new polyphormism
 
-Things you may want to cover:
+rails g model Animal
 
-* Ruby version
+rails g model Cat
 
-* System dependencies
+rails g model Dog
 
-* Configuration
+rails g model Cow
 
-* Database creation
+En el modelo Animal, escribir:
 
-* Database initialization
+    class Animal < ApplicationController
+        def nombre_metodo
+            puts 'Este es un metodo de la clase Animal'
+        end
+    end
 
-* How to run the test suite
+En el modelo Cat, escribir:
 
-* Services (job queues, cache servers, search engines, etc.)
+    class Cat < Animal
+        def nombre_metodo
+            puts 'Este es un metodo de la clase Cat que hereda de Animal'
+        end
+    end
 
-* Deployment instructions
+En el modelo Dog, escribir:
 
-* ...
+    class Dog < Animal
+        def nombre_metodo
+            puts 'Este es un metodo de la clase Dog que hereda de Animal'
+        end
+    end
+
+En el modelo Cow, escribir:
+
+    class Cow < Animal
+        def nombre_metodo
+            puts 'Este es un metodo de la clase Cow que hereda de Animal'
+        end
+    end
+
+Usos:
+
+1. Definimos una variable animal hijo:
+    
+    animal = Dog.new
+    animal.nombre_metodo
+    resultado = 'Este es un metodo de la clase Dog que hereda de Animal'
+
+2. Definimos la variable animal padre:
+
+    animal = Animal.new
+    animal.nombre_metodo
+    resultado = 'Este es un metodo de la clase Animal'
