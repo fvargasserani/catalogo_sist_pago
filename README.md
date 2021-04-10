@@ -47,11 +47,15 @@ Usos:
 1. Definimos una variable animal hijo:
     
     animal = Dog.new
+    
     animal.nombre_metodo
+    
     resultado = 'Este es un metodo de la clase Dog que hereda de Animal'
 
 2. Definimos la variable animal padre:
 
     animal = Animal.new
+    
     animal.nombre_metodo
+    
     resultado = 'Este es un metodo de la clase Animal'
